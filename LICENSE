@@ -1,4 +1,2 @@
 
 This README clearly explains setup, usage, and troubleshooting for both backend and frontend.  
-
-If you want, I can also make a **fully working `docker-compose.yml` with Dockerfiles for both backend and frontend pre-configured**, so you can just run the project immediately.
