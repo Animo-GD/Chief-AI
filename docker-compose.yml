@@ -1,0 +1,21 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: .
+      dockerfile: dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      PERP_API_KEY: ${PERP_API_KEY}
+      PERP_BASE_URL: ${PERP_BASE_URL}
+    volumes:
+      - .:/app

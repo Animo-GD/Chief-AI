@@ -1,0 +1,211 @@
+:root {
+  /* Base colors */
+  --white: #ffffff;
+  --black: #000000;
+  --gray-light: whitesmoke;
+  --gray-medium: rgba(0, 0, 0, 0.339);
+  --border-light: rgba(0, 0, 0, 0.46);
+  --text-gray: rgb(80, 80, 80);
+
+  /* Buttons */
+  --btn-dark: rgb(33, 32, 32);
+  --btn-dark-hover: rgb(0, 0, 0);
+
+  /* Recipe box */
+  --recipe-bg: rgba(227, 216, 213, 0.495);
+  --recipe-btn: rgba(233, 85, 31, 0.838);
+  --recipe-btn-hover: rgb(242, 92, 38);
+
+  /* Shadows */
+  --root-shadow-light: whitesmoke;
+  --root-shadow-dark: black;
+}
+
+/*----------------------------------------------------*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
+}
+
+#root {
+  border: 3px solid var(--white);
+  min-height: 80px;
+  width: 500px;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--root-shadow-light), 0 0 10px var(--root-shadow-dark);
+  background-color: var(--gray-light);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/*----------------------------------------------------*/
+
+.header {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--white);
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 0px 5px var(--gray-medium);
+}
+
+.header > h1 {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+/*----------------------------------------------------*/
+
+.add {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 3px 5px;
+}
+
+.add > input {
+  width: 60%;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid var(--border-light);
+  font-size: 10px;
+  padding: 10px 20px;
+}
+
+.add > button {
+  width: 25%;
+  height: 25px;
+  border: none;
+  background-color: var(--btn-dark);
+  color: var(--white);
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.add > button::before {
+  content: "+";
+  margin-left: 5px;
+}
+
+.add > button:hover {
+  background-color: var(--btn-dark-hover);
+}
+
+/*----------------------------------------------------*/
+
+.ing-list {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  font-size: 15px;
+  color: var(--text-gray);
+}
+
+.body {
+  padding: 10px 35px;
+}
+
+/*----------------------------------------------------*/
+
+.get-recipe {
+  padding: 10px;
+  background-color: var(--recipe-bg);
+  width: 450px;
+  margin: auto;
+  border-radius: 5px;
+  height: 100px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.get-recipe p {
+  font-size: 12px;
+}
+
+.get-recipe button {
+  border: none;
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--white);
+  background-color: var(--recipe-btn);
+}
+
+.get-recipe button:hover {
+  background-color: var(--recipe-btn-hover);
+}
+.recipe{
+  padding: 20px 30px;
+  font-size: small;
+}
+
+/*----------------------------------------------------*/
+.spinner {
+  animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% {
+    stroke: #4285f4;
+  }
+  25% {
+    stroke: #de3e35;
+  }
+  50% {
+    stroke: #f7c223;
+  }
+  75% {
+    stroke: #1b9a59;
+  }
+  100% {
+    stroke: #4285f4;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
