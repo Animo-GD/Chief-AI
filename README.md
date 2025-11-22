@@ -20,17 +20,24 @@ A full-stack AI-powered recipe generator. Users input ingredients via a React fr
 git clone https://github.com/Animo-GD/Chief-AI.git
 cd Chief-AI
 ```
-2. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-3. Build the docker image
+2. Setup your perplexity API key
+    - Get You perplexity API key from [here](https://www.perplexity.ai/account/api/keys)
+    - rename `.env.example` to `.env`
+    ```bash
+    cp .env.example .env
+    ```
+    - Add your API key to `PERP_API_KEY =...`
+3. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+4. Build the docker image
 ```bash
 docker compose build
 ```
-4. Run the docker container
+5. Run the docker container
 ```bash
 docker compose up
 ```
 
-5. Open the App from this url
+6. Open the App from this url
 [http://localhost:5173/](http://localhost:5173)
 
 
