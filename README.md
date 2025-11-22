@@ -16,9 +16,21 @@ A full-stack AI-powered recipe generator. Users input ingredients via a React fr
 ---
 ## Installation 
 1. Clone the repo to your local machine.
-2. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 ```bash
-git clone
+git clone https://github.com/Animo-GD/Chief-AI.git
+cd Chief-AI
 ```
+2. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+3. Build the docker image
+```bash
+docker compose build
+```
+4. Run the docker container
+```bash
+docker compose up
+```
+
+5. Open the App from this url
+[http://localhost:5173/](http://localhost:5173)
 
 
