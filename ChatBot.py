@@ -25,6 +25,7 @@ template_message = "\n".join(
     "{ingredient}",
     "## Recipe Language",
     "your output recipe must be only in {language}",
+    "Only return the code which I will put in return statement."
     "## Output",
     "```jsx"]
 )
