@@ -2,7 +2,7 @@ import axios from "axios";
 
 export async function sendIngredient(ingredients) {
   try {
-    const res = await axios.post("http://127.0.0.1:8000/get-recipe", {
+    const res = await axios.post("https://chief-ai-production.up.railway.app/get-recipe", {
       items: ingredients,
     });
     return res.data.recipe; // return recipe string
